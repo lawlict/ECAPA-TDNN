@@ -62,7 +62,7 @@ class Conv1dReluBn(nn.Module):
 class SE_Connect(nn.Module):
     def __init__(self, channels, s=2):
         super().__init__()
-        assert channels % s == 0, "{} % {} != 0".format(channesl, s)
+        assert channels % s == 0, "{} % {} != 0".format(channels, s)
         self.linear1 = nn.Linear(channels, channels // s)
         self.linear2 = nn.Linear(channels // s, channels)
 
